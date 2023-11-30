@@ -253,7 +253,9 @@ namespace Iot.Device.Display
                     value = " " + value[0] + value.Substring(2, 2);
                     break;
                 case 5 when value[2] != ':':
-                    throw new ArgumentException($"{nameof(value)}[2] must be a ':'", nameof(value));
+#pragma warning disable CA2208 // Instantiate argument exceptions correctly. This complains because our message includes the text 'value' but we do want to include it in this case given we are indexing into that argument.
+                    throw new ArgumentException($"value[2] must be a ':'", nameof(value));
+#pragma warning restore CA2208 // Instantiate argument exceptions correctly
                 case 5:
                     Dots |= Dot.CenterColon;
                     value = value.Substring(0, 2) + value.Substring(3, 2);

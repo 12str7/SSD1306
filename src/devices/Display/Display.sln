@@ -1,21 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34310.174
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{20F2E85F-D100-4EE6-BF7D-8BB8748D626C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Large4Digit7SegmentDisplay.sample", "samples\Large4Digit7SegmentDisplay\Large4Digit7SegmentDisplay.sample.csproj", "{C4D7AED7-B340-4DCD-974C-5150C6D5F074}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Large4Digit7SegmentDisplay.sample", "samples\Large4Digit7SegmentDisplay\Large4Digit7SegmentDisplay.sample.csproj", "{C4D7AED7-B340-4DCD-974C-5150C6D5F074}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix.sample", "samples\Matrix\Matrix.sample.csproj", "{C4D7AED7-B340-4DCD-974C-5150C6D5F074}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Matrix.sample", "samples\Matrix\Matrix.sample.csproj", "{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix8x8Bicolor.sample", "samples\Matrix8x8Bicolor\Matrix8x8Bicolor.sample.csproj", "{C4D7AED7-B340-4DCD-974C-5150C6D5F074}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Matrix8x8Bicolor.sample", "samples\Matrix8x8Bicolor\Matrix8x8Bicolor.sample.csproj", "{41D46FC8-76E9-4080-9E54-BB85E766A7E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiColorBargraph.sample", "samples\BiColorBargraph.sample.csproj", "{C4D7AED7-B340-4DCD-974C-5150C6D5F074}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiColorBargraph.sample", "samples\BiColorBargraph.sample.csproj", "{474354F8-9728-4786-8D12-7950B538DB47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Display", "Display.csproj", "{4AAE8B9E-8540-4582-8083-D1F14104BAAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Display", "Display.csproj", "{4AAE8B9E-8540-4582-8083-D1F14104BAAC}"
 EndProject
-
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,9 +23,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C4D7AED7-B340-4DCD-974C-5150C6D5F074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -41,6 +37,30 @@ Global
 		{C4D7AED7-B340-4DCD-974C-5150C6D5F074}.Release|x64.Build.0 = Release|Any CPU
 		{C4D7AED7-B340-4DCD-974C-5150C6D5F074}.Release|x86.ActiveCfg = Release|Any CPU
 		{C4D7AED7-B340-4DCD-974C-5150C6D5F074}.Release|x86.Build.0 = Release|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Debug|x64.Build.0 = Debug|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Debug|x86.Build.0 = Debug|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Release|x64.ActiveCfg = Release|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Release|x64.Build.0 = Release|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Release|x86.ActiveCfg = Release|Any CPU
+		{AF81C83C-76CB-4A45-8195-79DB3E85E2C4}.Release|x86.Build.0 = Release|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Debug|x64.Build.0 = Debug|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Debug|x86.Build.0 = Debug|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Release|x64.ActiveCfg = Release|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Release|x64.Build.0 = Release|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Release|x86.ActiveCfg = Release|Any CPU
+		{41D46FC8-76E9-4080-9E54-BB85E766A7E1}.Release|x86.Build.0 = Release|Any CPU
 		{4AAE8B9E-8540-4582-8083-D1F14104BAAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4AAE8B9E-8540-4582-8083-D1F14104BAAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AAE8B9E-8540-4582-8083-D1F14104BAAC}.Debug|x64.ActiveCfg = Debug|Any CPU
@@ -53,6 +73,9 @@ Global
 		{4AAE8B9E-8540-4582-8083-D1F14104BAAC}.Release|x64.Build.0 = Release|Any CPU
 		{4AAE8B9E-8540-4582-8083-D1F14104BAAC}.Release|x86.ActiveCfg = Release|Any CPU
 		{4AAE8B9E-8540-4582-8083-D1F14104BAAC}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C4D7AED7-B340-4DCD-974C-5150C6D5F074} = {20F2E85F-D100-4EE6-BF7D-8BB8748D626C}

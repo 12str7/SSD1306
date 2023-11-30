@@ -12,6 +12,8 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <MainLibraryPath>$(MSBuildThisFileDirectory)src/System.Device.Gpio/</MainLibraryPath>
     <Nullable>enable</Nullable>
+    <IsTrimmable Condition="'$(IsTrimmable)' == '' and $([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net6.0'))">true</IsTrimmable>
+    <IsAotCompatible Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net7.0'))">true</IsAotCompatible>
   </PropertyGroup>
 
   <PropertyGroup>
