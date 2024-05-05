@@ -7,31 +7,53 @@ using LibgpiodV1 = Interop.LibgpiodV1;
 namespace System.Device.Gpio.Libgpiod.V1;
 
 /// <summary>
-/// Pointer to a pin.
+/// Pointer to a pin (Not a real SafeLineHandle, because we need to align its finalization with the owning object)
 /// </summary>
-internal class SafeLineHandle : SafeHandle
+internal sealed class SafeLineHandle : IDisposable
 {
-    public PinMode PinMode { get; set; }
-
-    public SafeLineHandle()
-        : base(IntPtr.Zero, true)
+    private IntPtr _handle;
+    public SafeLineHandle(IntPtr handle)
     {
+        _handle = handle;
+        PinMode = PinMode.Input;
     }
 
-    protected override bool ReleaseHandle()
+    public PinMode PinMode { get; set; }
+
+    public IntPtr Handle
     {
-        // Contrary to intuition, this does not invalidate the handle (see comment on declaration)
-        LibgpiodV1.gpiod_line_release(handle);
-        return true;
+        get
+        {
+            if (_handle == IntPtr.Zero)
+            {
+                throw new ObjectDisposedException(nameof(SafeLineHandle));
+            }
+
+            return _handle;
+        }
+        set
+        {
+            _handle = value;
+        }
     }
 
     /// <summary>
-    /// Release the lock on the line handle. <see cref="LibgpiodV1.gpiod_line_release"/>
+    /// Release the lock on the line handle. <see cref="Interop.LibgpiodV1.gpiod_line_release"/>
     /// </summary>
     public void ReleaseLock()
     {
-        ReleaseHandle();
+        // Contrary to intuition, this does not invalidate the handle (see comment on declaration)
+        Interop.LibgpiodV1.gpiod_line_release(_handle);
     }
 
-    public override bool IsInvalid => handle == IntPtr.Zero || handle == LibgpiodV1.InvalidHandleValue;
+    public bool IsInvalid => _handle == IntPtr.Zero || _handle == Interop.LibgpiodV1.InvalidHandleValue;
+
+    public void Dispose()
+    {
+        if (_handle != IntPtr.Zero)
+        {
+            Interop.LibgpiodV1.gpiod_line_release(_handle);
+            _handle = IntPtr.Zero;
+        }
+    }
 }
